@@ -926,7 +926,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     datetime: Schema.Attribute.DateTime;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     dynamic_zone: Schema.Attribute.DynamicZone<
       ['dynamic-zone.related-products', 'dynamic-zone.cta']
     >;
