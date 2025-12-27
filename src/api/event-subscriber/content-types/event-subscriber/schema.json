@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_subscribers",
+  "info": {
+    "singularName": "event-subscriber",
+    "pluralName": "event-subscribers",
+    "displayName": "event-subscriber"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "event_subscribers"
+    }
+  }
+}

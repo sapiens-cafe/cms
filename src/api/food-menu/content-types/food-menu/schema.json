@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "food_menus",
+  "info": {
+    "singularName": "food-menu",
+    "pluralName": "food-menus",
+    "displayName": "/food-menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dynamic_zone_general_conditions",
+  "info": {
+    "displayName": "General_Conditions",
+    "icon": "",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
