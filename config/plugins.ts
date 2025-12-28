@@ -20,6 +20,15 @@ export default ({ env }) => ({
             Bucket: env("S3_BUCKET", "local-bucket"),
           },
         },
+        actionOptions: {
+          upload: {},
+          uploadStream: {},
+          delete: {},
+          // Cette ligne force la génération d'URLs signées pour l'affichage
+          getSignedUrl: {
+            expiresIn: 3600, // Durée de validité en secondes (1h)
+          },
+        },
       },
     },
   },
