@@ -7,7 +7,9 @@ export default ({ env }) => ({
     config: {
       provider: "aws-s3",
       providerOptions: {
-        baseUrl: env("S3_BASE_URL", "http://localhost:9000/local-bucket"),
+        // base urls is only for local development with MinIO
+        // it should be omitted or set to undefined in production
+        baseUrl: env("S3_BASE_URL"),
         s3Options: {
           credentials: {
             accessKeyId: env("S3_KEY", "strapi_user"),
