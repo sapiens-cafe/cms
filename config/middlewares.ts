@@ -7,27 +7,9 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:", "http:"],
-          "img-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "market-assets.strapi.io",
-            "localhost:9000",
-            "127.0.0.1:9000",
-            "storage.railway.app", // Autorise le domaine de stockage Railway
-            "*.railway.app", // Autorise tous les sous-domaines Railway par sécurité
-          ],
-          "media-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "market-assets.strapi.io",
-            "localhost:9000",
-            "127.0.0.1:9000",
-            "storage.railway.app", // Autorise le domaine de stockage Railway
-            "*.railway.app", // Autorise tous les sous-domaines Railway par sécurité
-          ],
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           upgradeInsecureRequests: null,
         },
       },
