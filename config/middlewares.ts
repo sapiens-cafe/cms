@@ -15,6 +15,8 @@ export default [
             "market-assets.strapi.io",
             "localhost:9000",
             "127.0.0.1:9000",
+            "storage.railway.app", // Autorise le domaine de stockage Railway
+            "*.railway.app", // Autorise tous les sous-domaines Railway par sécurité
           ],
           "media-src": [
             "'self'",
@@ -23,6 +25,8 @@ export default [
             "market-assets.strapi.io",
             "localhost:9000",
             "127.0.0.1:9000",
+            "storage.railway.app", // Autorise le domaine de stockage Railway
+            "*.railway.app", // Autorise tous les sous-domaines Railway par sécurité
           ],
           upgradeInsecureRequests: null,
         },
