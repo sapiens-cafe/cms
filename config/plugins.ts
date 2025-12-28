@@ -18,6 +18,8 @@ export default ({ env }) => ({
           region: env("S3_REGION", "us-east-1"), // MinIO needs a placeholder region
           params: {
             Bucket: env("S3_BUCKET", "local-bucket"),
+            ACL: "private", // <== set ACL to private
+            signedUrlExpires: env("AWS_SIGNED_URL_EXPIRES", 15 * 60),
           },
         },
         actionOptions: {
