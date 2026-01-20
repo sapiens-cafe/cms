@@ -19,7 +19,15 @@ const HomePage = () => {
   const [emails, setEmails] = useState<{ id: Number; email: string }[]>([]);
   useEffect(() => {
     const fetchEmails = async () => {
-      const res = await get('/content-manager/collection-types/api::subscriber.subscriber');
+      const res = await get('/content-manager/collection-types/api::subscriber.subscriber', {
+        params: {
+          pagination: {
+            page: 1,
+            pageSize: 1000,
+          },
+          sort: 'createdAt:desc',
+        },
+      });
       const list = res.data.results;
       setEmails(list);
     };
