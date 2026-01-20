@@ -19,17 +19,17 @@ const HomePage = () => {
   const [emails, setEmails] = useState<{ id: Number; email: string }[]>([]);
   useEffect(() => {
     const fetchEmails = async () => {
-      const res = await get('/content-manager/collection-types/api::subscriber.subscriber', {
-        params: {
-          pagination: {
-            page: 1,
-            pageSize: 1000,
+      const res = await fetch(
+        '/api/subscribers?pagination[page]=1&pagination[pageSize]=1000&sort=createdAt:desc&populate=*',
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
           },
-          sort: 'createdAt:desc',
-        },
-      });
-      const list = res.data.results;
-      setEmails(list);
+        }
+      );
+      const list = await res.json();
+      setEmails(list.data);
     };
     fetchEmails();
   }, []);
@@ -51,7 +51,7 @@ const HomePage = () => {
           Newsletter Subscribers
         </h1>
         <Button onClick={handleCopy}>📋 Copy all emails</Button>
-        {emails.length > 0 && (
+        {emails?.length > 0 && (
           <Box padding={8} background="neutral100">
             <Table>
               <Thead>
