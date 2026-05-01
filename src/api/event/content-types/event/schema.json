@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Events",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": { "type": "string" },
+    "price": { "type": "integer" },
+    "description": { "type": "text" },
+    "slug": { "pluginOptions": {}, "type": "uid", "targetField": "name" },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "perks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.perks"
+    },
+    "audiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::audience.audience",
+      "mappedBy": "event"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "event"
+    },
+    "dynamic_zone": {
+      "type": "dynamiczone",
+      "components": ["dynamic-zone.related-products", "dynamic-zone.cta"]
+    },
+    "featured": { "type": "boolean", "default": false },
+    "datetime": { "type": "datetime" },
+    "event_subscribers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-subscriber.event-subscriber",
+      "mappedBy": "event"
+    }
+  }
+}

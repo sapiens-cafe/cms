@@ -208,7 +208,7 @@ export interface DynamicZonePricing extends Struct.ComponentSchema {
   };
   attributes: {
     heading: Schema.Attribute.String;
-    plans: Schema.Attribute.Relation<'oneToMany', 'api::plan.plan'>;
+    plans: Schema.Attribute.Relation<'oneToMany', 'api::audience.audience'>;
     sub_heading: Schema.Attribute.String;
   };
 }
@@ -234,26 +234,9 @@ export interface DynamicZoneRelatedProducts extends Struct.ComponentSchema {
     icon: 'stack';
   };
   attributes: {
-    heading: Schema.Attribute.String;
-    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
-    sub_heading: Schema.Attribute.String;
-  };
-}
-
-export interface DynamicZoneTestimonials extends Struct.ComponentSchema {
-  collectionName: 'components_dynamic_zone_testimonials';
-  info: {
-    description: '';
-    displayName: 'Testimonials';
-    icon: 'emotionHappy';
-  };
-  attributes: {
+    events: Schema.Attribute.Relation<'oneToMany', 'api::event.event'>;
     heading: Schema.Attribute.String;
     sub_heading: Schema.Attribute.String;
-    testimonials: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::testimonial.testimonial'
-    >;
   };
 }
 
@@ -540,7 +523,6 @@ declare module '@strapi/strapi' {
       'dynamic-zone.pricing': DynamicZonePricing;
       'dynamic-zone.related-articles': DynamicZoneRelatedArticles;
       'dynamic-zone.related-products': DynamicZoneRelatedProducts;
-      'dynamic-zone.testimonials': DynamicZoneTestimonials;
       'global.footer': GlobalFooter;
       'global.navbar': GlobalNavbar;
       'items.graph-card-top-items': ItemsGraphCardTopItems;

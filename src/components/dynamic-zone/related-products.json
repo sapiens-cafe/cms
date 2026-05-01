@@ -12,10 +12,10 @@
     "sub_heading": {
       "type": "string"
     },
-    "products": {
+    "events": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::product.product"
+      "target": "api::event.event"
     }
   }
 }

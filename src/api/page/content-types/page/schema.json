@@ -46,7 +46,6 @@
       "components": [
         "dynamic-zone.hero",
         "dynamic-zone.features",
-        "dynamic-zone.testimonials",
         "dynamic-zone.how-it-works",
         "dynamic-zone.brands",
         "dynamic-zone.pricing",

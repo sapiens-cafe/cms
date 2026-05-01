@@ -16,7 +16,7 @@
     "plans": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::plan.plan"
+      "target": "api::audience.audience"
     }
   }
 }
