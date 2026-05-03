@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_menu_menu_images",
+  "info": {
+    "displayName": "Menu Image",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

@@ -248,6 +248,7 @@ export interface GlobalFooter extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
+    address: Schema.Attribute.String;
     built_with: Schema.Attribute.String;
     copyright: Schema.Attribute.String;
     description: Schema.Attribute.String;
@@ -348,6 +349,18 @@ export interface ItemsRayItems extends Struct.ComponentSchema {
     item_1: Schema.Attribute.String;
     item_2: Schema.Attribute.String;
     item_3: Schema.Attribute.String;
+  };
+}
+
+export interface MenuMenuImage extends Struct.ComponentSchema {
+  collectionName: 'components_menu_menu_images';
+  info: {
+    description: '';
+    displayName: 'Menu Image';
+    icon: 'picture';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
@@ -529,6 +542,7 @@ declare module '@strapi/strapi' {
       'items.input': ItemsInput;
       'items.left-navbar-items': ItemsLeftNavbarItems;
       'items.ray-items': ItemsRayItems;
+      'menu.menu-image': MenuMenuImage;
       'shared.button': SharedButton;
       'shared.form': SharedForm;
       'shared.launches': SharedLaunches;

@@ -17,15 +17,9 @@
   },
   "attributes": {
     "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu-image",
       "pluginOptions": {
         "i18n": {
           "localized": true
