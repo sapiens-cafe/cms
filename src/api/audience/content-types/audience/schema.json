@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "plans",
+  "collectionName": "audiences",
   "info": {
     "singularName": "audience",
     "pluralName": "audiences",

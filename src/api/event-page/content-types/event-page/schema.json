@@ -1,6 +1,6 @@
 {
   "kind": "singleType",
-  "collectionName": "product_pages",
+  "collectionName": "event_pages",
   "info": {
     "singularName": "event-page",
     "pluralName": "event-pages",

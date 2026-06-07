@@ -450,7 +450,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
 }
 
 export interface ApiAudienceAudience extends Struct.CollectionTypeSchema {
-  collectionName: 'plans';
+  collectionName: 'audiences';
   info: {
     description: '';
     displayName: 'Audiences';
@@ -587,7 +587,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 }
 
 export interface ApiEventPageEventPage extends Struct.SingleTypeSchema {
-  collectionName: 'product_pages';
+  collectionName: 'event_pages';
   info: {
     displayName: '/events';
     pluralName: 'event-pages';
@@ -689,7 +689,7 @@ export interface ApiEventSubscriberEventSubscriber
 }
 
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
-  collectionName: 'products';
+  collectionName: 'events';
   info: {
     description: '';
     displayName: 'Events';
